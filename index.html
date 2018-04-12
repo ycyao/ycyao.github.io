@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   
   
+  <meta name="description" content="blog" />
+  
 
   
   
@@ -13,12 +15,15 @@
   
   <title>狐獴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="blog">
+<meta property="og:type" content="website">
 <meta property="og:title" content="狐獴">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="狐獴">
+<meta property="og:description" content="blog">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="狐獴">
+<meta name="twitter:description" content="blog">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -60,7 +65,7 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
-    <article id="post-opencv环境的搭搭建" class="post-opencv环境的搭搭建 post type-post status-publish format-standard hentry">
+    <article id="post-01-最大子序列和问题" class="post-01-最大子序列和问题 post type-post status-publish format-standard hentry">
     <!---->
 
       <header class="entry-header">
@@ -68,14 +73,121 @@
         
   
     <h1 class="entry-title">
-      <a class="article-title" href="/2016/11/05/opencv环境的搭搭建/">opencv_contrib+vs2015环境的搭搭建知识总结</a>
+      <a class="article-title" href="/2018/04/12/01-最大子序列和问题/">01-最大子序列和问题</a>
     </h1>
   
 
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/05/opencv环境的搭搭建/" data-id="civ6miq7l0001lkv0dooxab4m" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-最大子序列和问题/" data-id="cjfwhw3cn0000a4v07ntvgsr6" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>#01-最大子序列和问题<br>描述：<a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389752868327424" target="_blank" rel="external">最大子序列和问题</a><br>使用在线处理算法：</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int k,a[100000];
+    cin&gt;&gt;k;
+    for(int i=0;i&lt;k;i++)cin&gt;&gt;a[i];
+    int thissum=0,max=0;
+    for(int i=0;i&lt;k;i++)
+    {
+        thissum+=a[i];
+        if(thissum&gt;max)
+            max=thissum;
+        if(thissum&lt;0)
+            thissum=0;
+    }
+    cout&lt;&lt;max;
+}
+</code></pre>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/04/12/01-最大子序列和问题/">
+    <time datetime="2018-04-12T15:24:29.000Z" class="entry-date">
+        2018-04-12
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c++</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-opencv的基础笔记" class="post-opencv的基础笔记 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2016/11/06/opencv的基础笔记/">opencv的基础笔记</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/06/opencv的基础笔记/" data-id="cjfwhw3di0003a4v05hrfd347" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/11/06/opencv的基础笔记/">
+    <time datetime="2016-11-06T12:39:20.000Z" class="entry-date">
+        2016-11-06
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-opencv环境的搭建" class="post-opencv环境的搭建 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2016/11/05/opencv环境的搭建/">opencv_contrib+vs2015环境的搭搭建知识总结</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/05/opencv环境的搭建/" data-id="cjfwhw3d20001a4v0dodz8o4q" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -84,14 +196,14 @@
         <h1 id="opencv-contrib-vs2015环境的搭搭建知识总结"><a href="#opencv-contrib-vs2015环境的搭搭建知识总结" class="headerlink" title="opencv_contrib+vs2015环境的搭搭建知识总结"></a>opencv_contrib+vs2015环境的搭搭建知识总结</h1><p>   为什么要写有关于的知识总结，而不是它的环境搭建呢？我个人觉得：则是授人以鱼不如授人以渔。其实，只要懂得其中的原理了，在加上网上百度的教程博客，<br>就可以很好地搭好环境了。作为一个还在学习中的小白，我把这个知识归结为3点：
         
           <p class="article-more-link">
-            <a href="/2016/11/05/opencv环境的搭搭建/#more" class="more-link">More <span class="meta-nav">→</span></a>
+            <a href="/2016/11/05/opencv环境的搭建/#more" class="more-link">More <span class="meta-nav">→</span></a>
           </p>
         
       
     </div><!-- .entry-content -->
 
     <footer class="entry-meta">
-    <a href="/2016/11/05/opencv环境的搭搭建/">
+    <a href="/2016/11/05/opencv环境的搭建/">
     <time datetime="2016-11-05T13:11:13.000Z" class="entry-date">
         2016-11-05
     </time>
@@ -101,153 +213,6 @@
   <span class="article-delim">&#8226;</span>
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/">opencv</a></li></ul>
 
-    </footer>
-</article>
-
-
-
-
-
-
-  
-    <article id="post-second" class="post-second post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2016/10/29/second/">用github、hexo搭建博客</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/10/29/second/" data-id="civ6miq7w0002lkv07ewd1kur" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <p>#</p>
-
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2016/10/29/second/">
-    <time datetime="2016-10-29T15:24:29.000Z" class="entry-date">
-        2016-10-29
-    </time>
-</a>
-    
-    
-  <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭博客/">搭博客</a></li></ul>
-
-    </footer>
-</article>
-
-
-
-
-
-
-  
-    <article id="post-天空哭泣的时候，我总遇到你" class="post-天空哭泣的时候，我总遇到你 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2016/07/30/天空哭泣的时候，我总遇到你/">天空哭泣的时候，我总能遇见你</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/07/30/天空哭泣的时候，我总遇到你/" data-id="civ6miq8h0004lkv02jpqv4cz" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h2 id="天空哭泣的时候，我总能遇见你"><a href="#天空哭泣的时候，我总能遇见你" class="headerlink" title="天空哭泣的时候，我总能遇见你"></a>天空哭泣的时候，我总能遇见你</h2><p>那一年,父母把妹妹送给别人的时候,我一直在想,如果我不任性的非要去买三十块钱的变形金刚,如果我再乖点,让父母省心一点,他们就不会在我身上花太多的时间,就有能力多养一个孩子了。事到如今,我依然记得那天全家送妹妹的情形。一位中年男子,笑容满面的牵起她的手,坐上了刚好从路边经过的长途汽车。<br>    为哄妹妹高兴,那个男人还为她买了 一个很高的冰激凌。我记得以前她每次经过路边的小店时,都会盯着冰箱里的 那种冰激凌看了好久,却从来没有开过口。那一次,她跟着那男人的身旁,到小店门口等车的时候,突然转过脸来跟爸爸说：“爸,你能给我买一个冰激凌吗?”<br>她说这话的时候是笑的,眼角却噙满了泪花。然而她的话还没有说完,那中年男子就赶紧上前一步,自己掏钱为她买了一个。上车之前,她却一直都把那个冰激凌握在手里,一口都不曾吃,天气炎热,冰激凌熔化以后,彩色的汁液沿着她的指缝一滴滴掉在地上,如同夏日的眼泪。<br>上了车以后,她终于忍不住再次转 过头来,大声对我们哭喊道：“妈,爸,你们 要我吧,我吃得很少的。”她说：“哥哥,你也劝劝爸爸啊,你们别抛弃我!” 一句话没说完,路边的我和妈妈终于忍不住哭出声来,然而爸爸却一直面无表情的看着车上的她,然后,他缓缓地抬起胳膊,<br>对车上男人挥挥手。“走！” 他在挥完手后,迅速地扭转身体,向远处走去。<br>我看见妹妹在看见爸爸走掉以后, 神情突然低落了下来,她在那男人安排下坐在了一个靠窗子的位置上,朝着我的方向幽怨看了一眼,最终落魄地低下了脑袋?我对着远去的汽车大声呼喊：“程悦,从此以后无论你去哪里,等我长大后一定会找到你的,你等我,等着哥哥。” 车子已经缓缓的消失在下一个路口,而我却劳劳的记住了摆在车后玻璃上的那块牌子。北镇→云倾。那四个红色 大字,每一个都像是烧红的烙印,深深地刻在了我的心上。 也许程悦永远不会知道，那一天爸爸转动轮椅走出没多远，便由于太过慌乱而掉进了路边的一个水沟里。后来他和妈妈抱在一起，哭成了一团。再后来，我拼尽全身的力气才把他扶上妈妈的肩膀，然后自己推着那辆已经瘪掉了的轮椅，跟在他们的身后，失魂落魄地回到了家。<br>    那一天,我把自己所有的玩具,所有的压岁钱全都拿了出来,一下子丢在爸爸的面前,大声的质问他,为什么把妹妹送走,这些东西我都不要了还不行么,你们不养她我养。然而一向温文尔雅的爸爸,在那一 天,却在我的脸上狠狠的打了一巴掌,他 说:“你懂个屁！” 是的,我的年龄还那么小,大人们的很多想法我的确不懂,但我却知道,真正的亲人,就要一生一世不分离,哪怕抱在 一起饿死,也不要分离。虽然我知道,爸爸之所以选择走这一步,也是迫不得已,但是年幼的我,还是忍不住恨他。他原来是这座北方小城里的一家机械厂的普通员工，后来有了两个孩子，仅靠那一点点工资，永远也无出头之日，于是便想办法贷款买了一辆大卡车跑起了长途运输，爸妹妹带走的那个男人就是他在跑运输的时候认识的。可是，他仅仅开了半年车，便因为疲劳驾驶在一座高桥上发生了严重的交通事故，那一次，爸爸高位截瘫，汽车也报废了。面对高额的贷款，联想到家里的窘迫状况，爸爸才不得不把妹妹送给了别人，留下了我。我和程悦共用的小房间里还帖着她的蜡笔画,绿色的树,红色的瓦房,以及瓦房<br>下面手牵手的一家,这样简单幸福生活,已经不再属于她了。
-        
-          <p class="article-more-link">
-            <a href="/2016/07/30/天空哭泣的时候，我总遇到你/#more" class="more-link">More <span class="meta-nav">→</span></a>
-          </p>
-        
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2016/07/30/天空哭泣的时候，我总遇到你/">
-    <time datetime="2016-07-30T14:49:50.000Z" class="entry-date">
-        2016-07-30
-    </time>
-</a>
-    
-    
-  <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-
-    </footer>
-</article>
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="post-hello-world post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2016/07/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/07/19/hello-world/" data-id="civ6miq7b0000lkv0n6jw667c" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2016/07/19/hello-world/">
-    <time datetime="2016-07-19T08:33:06.739Z" class="entry-date">
-        2016-07-19
-    </time>
-</a>
-    
-    
     </footer>
 </article>
 
@@ -280,19 +245,15 @@
       <ul>
         
           <li>
-            <a href="/2016/11/05/opencv环境的搭搭建/">opencv_contrib+vs2015环境的搭搭建知识总结</a>
+            <a href="/2018/04/12/01-最大子序列和问题/">01-最大子序列和问题</a>
           </li>
         
           <li>
-            <a href="/2016/10/29/second/">用github、hexo搭建博客</a>
+            <a href="/2016/11/06/opencv的基础笔记/">opencv的基础笔记</a>
           </li>
         
           <li>
-            <a href="/2016/07/30/天空哭泣的时候，我总遇到你/">天空哭泣的时候，我总能遇见你</a>
-          </li>
-        
-          <li>
-            <a href="/2016/07/19/hello-world/">Hello World</a>
+            <a href="/2016/11/05/opencv环境的搭建/">opencv_contrib+vs2015环境的搭搭建知识总结</a>
           </li>
         
       </ul>
@@ -304,7 +265,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搭博客/">搭博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </aside>
 
@@ -313,7 +274,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/opencv/" style="font-size: 10px;">opencv</a> <a href="/tags/搭博客/" style="font-size: 10px;">搭博客</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+      <a href="/tags/c/" style="font-size: 10px;">c++</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a>
     </div>
   </aside>
 
@@ -321,7 +282,7 @@
 </div>
       </div>
       <footer id="colophon" role="contentinfo">
-    <p>&copy; 2016 yyc
+    <p>&copy; 2018 yyc
     All rights reserved.</p>
     <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
 </footer>

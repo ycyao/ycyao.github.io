@@ -13,17 +13,45 @@
   
   
   
-  <title>Archives: 2016 | 狐獴</title>
+  <title>01-最大子序列和问题 | 狐獴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="狐獴">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="#01-最大子序列和问题描述：最大子序列和问题使用在线处理算法：
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+
+int main()
+{
+    int k,a[100000];
+    cin&amp;gt;&amp;gt;k;
+    for(int i=0;i&amp;lt;k;i++)cin&amp;gt;&amp;gt;a[i];
+    int thissum=0,max=0;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="01-最大子序列和问题">
+<meta property="og:url" content="http://yoursite.com/2018/04/12/01-最大子序列和问题/index.html">
 <meta property="og:site_name" content="狐獴">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="#01-最大子序列和问题描述：最大子序列和问题使用在线处理算法：
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+
+int main()
+{
+    int k,a[100000];
+    cin&amp;gt;&amp;gt;k;
+    for(int i=0;i&amp;lt;k;i++)cin&amp;gt;&amp;gt;a[i];
+    int thissum=0,max=0;">
+<meta property="og:updated_time" content="2018-04-12T12:21:12.743Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="狐獴">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="01-最大子序列和问题">
+<meta name="twitter:description" content="#01-最大子序列和问题描述：最大子序列和问题使用在线处理算法：
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+
+int main()
+{
+    int k,a[100000];
+    cin&amp;gt;&amp;gt;k;
+    for(int i=0;i&amp;lt;k;i++)cin&amp;gt;&amp;gt;a[i];
+    int thissum=0,max=0;">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -63,69 +91,80 @@
     </nav>
 </header>
       <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-01-最大子序列和问题" class="post-01-最大子序列和问题 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="post type-post status-publish format-standard hentry archive-type-post">
-  <header class="entry-header">
-      
-  
-    <h1 class="entry-title">
-      <a class="archive-article-title" href="/2016/11/06/opencv的基础笔记/">opencv的基础笔记</a>
+    <h1 class="entry-title article-title">
+      01-最大子序列和问题
     </h1>
   
 
-  </header>
-  <footer class="entry-meta">
-    <a href="/2016/11/06/opencv的基础笔记/">
-    <time datetime="2016-11-06T12:39:20.000Z" class="entry-date">
-        2016-11-06
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-  
-    
-    
-    <article class="post type-post status-publish format-standard hentry archive-type-post">
-  <header class="entry-header">
-      
-  
-    <h1 class="entry-title">
-      <a class="archive-article-title" href="/2016/11/05/opencv环境的搭建/">opencv_contrib+vs2015环境的搭搭建知识总结</a>
-    </h1>
-  
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-最大子序列和问题/" data-id="cjfwhw3cn0000a4v07ntvgsr6" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
 
-  </header>
-  <footer class="entry-meta">
-    <a href="/2016/11/05/opencv环境的搭建/">
-    <time datetime="2016-11-05T13:11:13.000Z" class="entry-date">
-        2016-11-05
+    <div class="entry-content">
+      
+        <p>#01-最大子序列和问题<br>描述：<a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389752868327424" target="_blank" rel="external">最大子序列和问题</a><br>使用在线处理算法：</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int k,a[100000];
+    cin&gt;&gt;k;
+    for(int i=0;i&lt;k;i++)cin&gt;&gt;a[i];
+    int thissum=0,max=0;
+    for(int i=0;i&lt;k;i++)
+    {
+        thissum+=a[i];
+        if(thissum&gt;max)
+            max=thissum;
+        if(thissum&lt;0)
+            thissum=0;
+    }
+    cout&lt;&lt;max;
+}
+</code></pre>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/04/12/01-最大子序列和问题/">
+    <time datetime="2018-04-12T15:24:29.000Z" class="entry-date">
+        2018-04-12
     </time>
 </a>
     
     
   <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/">opencv</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c++</a></li></ul>
 
     </footer>
 </article>
-  
-  
-    </div></section>
-  
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2016/11/06/opencv的基础笔记/" rel="next">opencv的基础笔记 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
 
 </div></div>
         <div id="secondary" class="widget-area" role="complementary">
