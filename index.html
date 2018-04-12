@@ -80,33 +80,18 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-最大子序列和问题/" data-id="cjfwhw3cn0000a4v07ntvgsr6" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-最大子序列和问题/" data-id="cjfwikl2v0002fkv0pf6cxxra" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <p>#01-最大子序列和问题<br>描述：<a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389752868327424" target="_blank" rel="external">最大子序列和问题</a><br>使用在线处理算法：</p>
-<pre><code>#include&lt;iostream&gt;
-using namespace std;
-
-int main()
-{
-    int k,a[100000];
-    cin&gt;&gt;k;
-    for(int i=0;i&lt;k;i++)cin&gt;&gt;a[i];
-    int thissum=0,max=0;
-    for(int i=0;i&lt;k;i++)
-    {
-        thissum+=a[i];
-        if(thissum&gt;max)
-            max=thissum;
-        if(thissum&lt;0)
-            thissum=0;
-    }
-    cout&lt;&lt;max;
-}
-</code></pre>
+        <p>#01-最大子序列和问题<br>描述：<a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389752868327424">最大子序列和问题</a><br>使用在线处理算法：
+        
+          <p class="article-more-link">
+            <a href="/2018/04/12/01-最大子序列和问题/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
       
     </div><!-- .entry-content -->
 
@@ -121,6 +106,49 @@ int main()
   <span class="article-delim">&#8226;</span>
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c++</a></li></ul>
 
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-01-二分查找" class="post-01-二分查找 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2018/04/12/01-二分查找/">01-二分查找</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-二分查找/" data-id="cjfwikl2h0000fkv05jr1unqx" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>#01-二分查找<br><a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389916265828352" target="_blank" rel="external">问题描述</a><br>二分法是这样定义的：<br>    给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，<br>    返回-1表示没找到。<br>    二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&gt;x,则在左边的子系列<br>    中查找x;若List[M]<x，则在右边的子系列中查找x。 <--!more--=""><br>函数代码如下：<br>        Position BinarySearch( List L, ElementType X )<br>        {<br>            //struct LNode left,right,mid;<br>            int left=1,right=L-&gt;Last;<br>            while(left&lt;=right)<br>            {<br>                int mid=left+((right-left)&gt;&gt;1);<br>                if(L-&gt;Data[mid]&gt;X)<br>                {<br>                    right=mid-1;<br>                }<br>                else if(L-&gt;Data[mid]&lt;X)<br>                {<br>                    left=mid+1;<br>                }<br>                else<br>                {<br>                    return mid;<br>                }<br>            }<br>            return NotFound;<br>        }</x，则在右边的子系列中查找x。></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/04/12/01-二分查找/">
+    <time datetime="2018-04-12T12:30:54.000Z" class="entry-date">
+        2018-04-12
+    </time>
+</a>
+    
+    
     </footer>
 </article>
 
@@ -145,7 +173,7 @@ int main()
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/06/opencv的基础笔记/" data-id="cjfwhw3di0003a4v05hrfd347" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/06/opencv的基础笔记/" data-id="cjfwikl3q0004fkv0dddi2v39" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -187,7 +215,7 @@ int main()
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/05/opencv环境的搭建/" data-id="cjfwhw3d20001a4v0dodz8o4q" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/05/opencv环境的搭建/" data-id="cjfwikl2v0001fkv0d500ghkn" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -246,6 +274,10 @@ int main()
         
           <li>
             <a href="/2018/04/12/01-最大子序列和问题/">01-最大子序列和问题</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/12/01-二分查找/">01-二分查找</a>
           </li>
         
           <li>

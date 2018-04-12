@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/11/05/opencv环境的搭建/index.html">
 <meta property="og:site_name" content="狐獴">
 <meta property="og:description" content="opencv_contrib+vs2015环境的搭搭建知识总结   为什么要写有关于的知识总结，而不是它的环境搭建呢？我个人觉得：则是授人以鱼不如授人以渔。其实，只要懂得其中的原理了，在加上网上百度的教程博客，就可以很好地搭好环境了。作为一个还在学习中的小白，我把这个知识归结为3点：">
-<meta property="og:updated_time" content="2018-04-12T12:23:04.955Z">
+<meta property="og:updated_time" content="2018-04-12T12:28:07.366Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="opencv_contrib+vs2015环境的搭搭建知识总结">
 <meta name="twitter:description" content="opencv_contrib+vs2015环境的搭搭建知识总结   为什么要写有关于的知识总结，而不是它的环境搭建呢？我个人觉得：则是授人以鱼不如授人以渔。其实，只要懂得其中的原理了，在加上网上百度的教程博客，就可以很好地搭好环境了。作为一个还在学习中的小白，我把这个知识归结为3点：">
@@ -79,7 +79,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/05/opencv环境的搭建/" data-id="cjfwhw3d20001a4v0dodz8o4q" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/05/opencv环境的搭建/" data-id="cjfwikl2v0001fkv0d500ghkn" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -91,8 +91,7 @@
 <li>使用cmake编译opencv</li>
 <li>vs2015配置编译好的opencv</li>
 </ol>
-<h2 id="opencv，opencv-contrib，cmake有什么用"><a href="#opencv，opencv-contrib，cmake有什么用" class="headerlink" title="opencv，opencv_contrib，cmake有什么用"></a>opencv，opencv_contrib，cmake有什么用</h2><pre><code>opencv是一个封装好了计算机视觉函数库，里面的很多函数都已经集成好，比较成熟，可以很可靠的供大家使用。而opencv_contrib也是它的一部分，在原先
-</code></pre><p>的opencv当中，包含着一些很高级的模块，例如：人脸识别的face库等等。所以，你要是想使用这些库，就需要自己编译opencv把这些模块加到里面。<br>CMake是一个跨平台的安装（编译）工具，可以编译源代码、制作程式库。最后，附上，我在学习过程中觉得关于环境搭建的比较好的<a href="http://www.cnblogs.com/jliangqiu2016/p/5597501.html" target="_blank" rel="external">博客</a><br>（注：我按照这篇博客的教程来编译release版的时候，尝试了好几次才成功，可能release版比较容易失败吧，需要多尝试几次）</p>
+<h2 id="opencv，opencv-contrib，cmake有什么用"><a href="#opencv，opencv-contrib，cmake有什么用" class="headerlink" title="opencv，opencv_contrib，cmake有什么用"></a>opencv，opencv_contrib，cmake有什么用</h2><p>   opencv是一个封装好了计算机视觉函数库，里面的很多函数都已经集成好，比较成熟，可以很可靠的供大家使用。而opencv_contrib也是它的一部分，在原先<br>的opencv当中，包含着一些很高级的模块，例如：人脸识别的face库等等。所以，你要是想使用这些库，就需要自己编译opencv把这些模块加到里面。<br>CMake是一个跨平台的安装（编译）工具，可以编译源代码、制作程式库。最后，附上，我在学习过程中觉得关于环境搭建的比较好的<a href="http://www.cnblogs.com/jliangqiu2016/p/5597501.html" target="_blank" rel="external">博客</a><br>（注：我按照这篇博客的教程来编译release版的时候，尝试了好几次才成功，可能release版比较容易失败吧，需要多尝试几次）</p>
 <h2 id="vs2015环境的了解"><a href="#vs2015环境的了解" class="headerlink" title="vs2015环境的了解"></a>vs2015环境的了解</h2><ol>
 <li>Release和Debug有什么不同<br>release称为发行版，debug为调试版。debug中可以进行单步执行、断点等调试功能，但生成的可执行文件大，代码运行速度比较慢。release版不能调试，但生成的可执行文件小，运行速度快。<br>因此当你的应用经过测试准备投入使用时，你应该在Release模式下进行编译，这将生成供最终用户使用的可执行文件。<br>（注：经常发生Debug模式下运行正常而Release模式出错的情况，因此要进行更多测试来找到潜在的Bug。）</li>
 <li>几个目录<ul>
@@ -160,6 +159,10 @@
         
           <li>
             <a href="/2018/04/12/01-最大子序列和问题/">01-最大子序列和问题</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/12/01-二分查找/">01-二分查找</a>
           </li>
         
           <li>

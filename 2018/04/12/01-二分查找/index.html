@@ -13,18 +13,18 @@
   
   
   
-  <title>opencv的基础笔记 | 狐獴</title>
+  <title>01-二分查找 | 狐獴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="blog">
+  <meta name="description" content="#01-二分查找问题描述二分法是这样定义的：    给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，    返回-1表示没找到。    二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列    中查找x;若List[M]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="opencv的基础笔记">
-<meta property="og:url" content="http://yoursite.com/2016/11/06/opencv的基础笔记/index.html">
+<meta property="og:title" content="01-二分查找">
+<meta property="og:url" content="http://yoursite.com/2018/04/12/01-二分查找/index.html">
 <meta property="og:site_name" content="狐獴">
-<meta property="og:description" content="blog">
-<meta property="og:updated_time" content="2018-04-12T12:23:09.013Z">
+<meta property="og:description" content="#01-二分查找问题描述二分法是这样定义的：    给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，    返回-1表示没找到。    二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列    中查找x;若List[M]">
+<meta property="og:updated_time" content="2018-04-12T12:42:29.334Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="opencv的基础笔记">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="01-二分查找">
+<meta name="twitter:description" content="#01-二分查找问题描述二分法是这样定义的：    给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，    返回-1表示没找到。    二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列    中查找x;若List[M]">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -64,7 +64,7 @@
     </nav>
 </header>
       <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-opencv的基础笔记" class="post-opencv的基础笔记 post type-post status-publish format-standard hentry">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-01-二分查找" class="post-01-二分查找 post type-post status-publish format-standard hentry">
     <!---->
 
       <header class="entry-header">
@@ -72,27 +72,28 @@
         
   
     <h1 class="entry-title article-title">
-      opencv的基础笔记
+      01-二分查找
     </h1>
   
 
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/06/opencv的基础笔记/" data-id="cjfwikl3q0004fkv0dddi2v39" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-二分查找/" data-id="cjfwikl2h0000fkv05jr1unqx" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        
+        <p>#01-二分查找<br><a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389916265828352" target="_blank" rel="external">问题描述</a><br>二分法是这样定义的：<br>    给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，<br>    返回-1表示没找到。<br>    二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&gt;x,则在左边的子系列<br>    中查找x;若List[M]<x，则在右边的子系列中查找x。 <--!more--=""><br>函数代码如下：<br>        Position BinarySearch( List L, ElementType X )<br>        {<br>            //struct LNode left,right,mid;<br>            int left=1,right=L-&gt;Last;<br>            while(left&lt;=right)<br>            {<br>                int mid=left+((right-left)&gt;&gt;1);<br>                if(L-&gt;Data[mid]&gt;X)<br>                {<br>                    right=mid-1;<br>                }<br>                else if(L-&gt;Data[mid]&lt;X)<br>                {<br>                    left=mid+1;<br>                }<br>                else<br>                {<br>                    return mid;<br>                }<br>            }<br>            return NotFound;<br>        }</x，则在右边的子系列中查找x。></p>
+
       
     </div><!-- .entry-content -->
 
     <footer class="entry-meta">
-    <a href="/2016/11/06/opencv的基础笔记/">
-    <time datetime="2016-11-06T12:39:20.000Z" class="entry-date">
-        2016-11-06
+    <a href="/2018/04/12/01-二分查找/">
+    <time datetime="2018-04-12T12:30:54.000Z" class="entry-date">
+        2018-04-12
     </time>
 </a>
     
@@ -105,10 +106,10 @@
 <nav class="nav-single">
     <h3 class="assistive-text">文章导航</h3>
     
-        <span class="nav-previous"><a href="/2018/04/12/01-二分查找/" rel="prev"><span class="meta-nav">←</span> 01-二分查找</a></span>
+        <span class="nav-previous"><a href="/2018/04/12/01-最大子序列和问题/" rel="prev"><span class="meta-nav">←</span> 01-最大子序列和问题</a></span>
     
     
-        <span class="nav-next"><a href="/2016/11/05/opencv环境的搭建/" rel="next">opencv_contrib+vs2015环境的搭搭建知识总结 <span class="meta-nav">→</span></a></span>
+        <span class="nav-next"><a href="/2016/11/06/opencv的基础笔记/" rel="next">opencv的基础笔记 <span class="meta-nav">→</span></a></span>
     
 </nav><!-- .nav-single -->
 
