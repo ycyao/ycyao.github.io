@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="blog" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>02一元多项式的乘法和加法 | 狐獴</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#02一元多项式的乘法和加法问题描述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="02一元多项式的乘法和加法">
+<meta property="og:url" content="http://yoursite.com/2018/04/20/02一元多项式的乘法和加法/index.html">
+<meta property="og:site_name" content="狐獴">
+<meta property="og:description" content="#02一元多项式的乘法和加法问题描述">
+<meta property="og:updated_time" content="2018-04-20T08:49:34.993Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="02一元多项式的乘法和加法">
+<meta name="twitter:description" content="#02一元多项式的乘法和加法问题描述">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="狐獴" rel="home">狐獴</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-02一元多项式的乘法和加法" class="post-02一元多项式的乘法和加法 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      02一元多项式的乘法和加法
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/20/02一元多项式的乘法和加法/" data-id="cjg7pscz30003mkv01wmconic" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>#02一元多项式的乘法和加法<br><a href="https://pintia.cn/problem-sets/951072707007700992/problems/972813112340258816 多项式" target="_blank" rel="external">问题描述</a><br><a id="more"></a></p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;stdlib.h&gt;
+using namespace std;
+
+
+struct PolyNode
+{
+    int coef;//系数
+    int expon;//指数
+    struct PolyNode* link;//指向下一个节点的指针
+};
+typedef struct PolyNode* Polynomial;
+
+
+int compare(int c1,int c2)
+{
+    int a=0;
+    if(c1&gt;c2) return a+1;
+    if(c1&lt;c2) return a-1;
+    if(c1==c2) return a;
+}
+
+void attach(int c,int e,Polynomial* prear)
+{
+    //由于在本函数中需要改变当前结果表达式尾项指针的值
+    //所以函数传入进来的是节点指针的地址
+    Polynomial p;
+    p=(Polynomial)malloc(sizeof(struct PolyNode));//申请新的节点
+    p-&gt;coef=c;
+    p-&gt;expon=e;
+    p-&gt;link=NULL;
+    //将p指向的新节点插入到当前结果的表达式尾项的后面
+    (*prear)-&gt;link=p;
+    *prear=p;
+}
+
+Polynomial readpoly()
+{
+    Polynomial p,rear,t;
+    p=(Polynomial)malloc(sizeof(struct PolyNode));
+    p-&gt;link=NULL;
+    rear=p;
+
+    int n,c,e;
+    cin&gt;&gt;n;
+    while(n--)
+    {
+        cin&gt;&gt;c&gt;&gt;e;
+        attach(c,e,&amp;rear);
+    }
+    //删除临时生成的头结点
+    t=p;
+    p=p-&gt;link;
+    free(t);
+    return p;
+}
+
+/*两个指针p1,p2分别指向这两个多项式的第一个节点，不断循环：
+   1.p1-&gt;expon==p2-&gt;expon :系数相加，结果不为0，则为结果多项式的系数，p1,p2都指向下一项
+   2.p1-&gt;expon&gt;p2-&gt;expon :将p1的当前项存入结果多项式，并使p2指向下一项
+   3.p1-&gt;expon《p2-&gt;expon :将p2的当前项存入结果多项式，并使p1指向下一项
+
+*/
+Polynomial add(Polynomial p1,Polynomial p2)
+{
+    Polynomial front,rear,temp;
+    int sum;
+    rear=(Polynomial)malloc(sizeof(struct PolyNode));
+    front=rear;
+    while(p1&amp;&amp;p2)
+    {
+        int a=compare(p1-&gt;expon,p2-&gt;expon);
+        switch (a)
+        {
+        case 1:
+        attach(p1-&gt;coef,p1-&gt;expon,&amp;rear);
+        p1=p1-&gt;link;
+        break;
+        case -1:
+        attach(p2-&gt;coef,p2-&gt;expon,&amp;rear);
+        p2=p2-&gt;link;
+        break;
+        case 0:
+        sum=p1-&gt;coef+p2-&gt;coef;
+        if(sum)attach(sum,p1-&gt;expon,&amp;rear);
+        p1=p1-&gt;link;
+        p2=p2-&gt;link;
+        break;
+        }
+
+    }
+    for(;p1;p1=p1-&gt;link)attach(p1-&gt;coef,p1-&gt;expon,&amp;rear);
+    for(;p2;p2=p2-&gt;link)attach(p2-&gt;coef,p2-&gt;expon,&amp;rear);
+    rear-&gt;link=NULL;
+    temp=front;
+    front=front-&gt;link;
+    free(temp);
+    return front;
+}
+/*
+方法：1.将乘法变成加法：将p1当前项乘p2多项式，再加到结果多项式里面
+      2.将p1当前项乘p2的当前项，并插入到结果多项式。关键是要找到插入的位置，
+        初始结果多项式可由p1第一项乘p2获得
+*/
+Polynomial mult(Polynomial p1,Polynomial p2)
+{
+    Polynomial p,rear,t1,t2,t;
+    int c,e;
+    if(!p1||!p2)return NULL;
+    t1=p1;t2=p2;
+    p=(Polynomial)malloc(sizeof(struct PolyNode));
+    p-&gt;link=NULL;
+    rear=p;
+    while(t2)
+    {
+        attach(t1-&gt;coef*t2-&gt;coef,t1-&gt;expon+t2-&gt;expon,&amp;rear);
+        t2=t2-&gt;link;
+    }
+    t1=t1-&gt;link;
+    //初始后，开始循环
+    while(t1)
+    {
+        t2=p2;rear=p;
+        while(t2)
+        {
+            e=t1-&gt;expon+t2-&gt;expon;
+            c=t1-&gt;coef*t2-&gt;coef;
+            while(rear-&gt;link&amp;&amp;rear-&gt;link-&gt;expon&gt;e)
+            {
+                rear=rear-&gt;link;
+            }
+            if(rear-&gt;link&amp;&amp;rear-&gt;link-&gt;expon==e)
+            {
+                if(rear-&gt;link-&gt;coef+c)
+                    rear-&gt;link-&gt;coef+=c;
+                else
+                {
+                    t=rear-&gt;link;
+                    rear-&gt;link=t-&gt;link;
+                    free(t);
+                }
+            }
+            else
+            {
+                t=(Polynomial)malloc(sizeof(struct PolyNode));
+                t-&gt;coef=c;
+                t-&gt;expon=e;
+                t-&gt;link=rear-&gt;link;
+                rear-&gt;link=t;
+                rear=rear-&gt;link;;
+            }
+            t2=t2-&gt;link;
+        }
+        t1=t1-&gt;link;
+    }
+
+    t2=p;p=p-&gt;link;
+    free(t2);
+    return p;
+}
+
+
+
+void printpoly(Polynomial p)
+{
+    int flag=0;
+    if(!p)
+    {
+        cout&lt;&lt;&quot;0 0&quot;&lt;&lt;endl;
+        return ;
+    }
+    while(p)
+    {
+        if(!flag)
+            flag=1;
+        else cout&lt;&lt;&quot; &quot;;
+        cout&lt;&lt;p-&gt;coef&lt;&lt;&quot; &quot;&lt;&lt;p-&gt;expon;
+        p=p-&gt;link;
+    }
+    cout&lt;&lt;endl;
+}
+
+int main()
+{
+    Polynomial p1,p2,pp,ps;
+    p1=readpoly();
+    p2=readpoly();
+    pp=mult(p1,p2);
+    printpoly(pp);
+    ps=add(p1,p2);
+    printpoly(ps);
+    return 0;
+}
+</code></pre>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/04/20/02一元多项式的乘法和加法/">
+    <time datetime="2018-04-20T08:42:45.000Z" class="entry-date">
+        2018-04-20
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2018/04/12/01-最大子序列和问题/" rel="next">01-最大子序列和问题 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/20/02一元多项式的乘法和加法/">02一元多项式的乘法和加法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/12/01-最大子序列和问题/">01-最大子序列和问题</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/12/01-二分查找/">01-二分查找</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/06/opencv的基础笔记/">opencv的基础笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/05/opencv环境的搭建/">opencv_contrib+vs2015环境的搭搭建知识总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/c/" style="font-size: 10px;">c++</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2018 yyc
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
