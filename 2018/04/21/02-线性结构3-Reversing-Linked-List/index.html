@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="blog" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>02-线性结构3 Reversing Linked List | 狐獴</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="02-线性结构3 Reversing Linked List问题描述
+知识点总结：c++的格式控制：cout&amp;lt;&amp;lt;’A’&amp;lt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="02-线性结构3 Reversing Linked List">
+<meta property="og:url" content="http://yoursite.com/2018/04/21/02-线性结构3-Reversing-Linked-List/index.html">
+<meta property="og:site_name" content="狐獴">
+<meta property="og:description" content="02-线性结构3 Reversing Linked List问题描述
+知识点总结：c++的格式控制：cout&amp;lt;&amp;lt;’A’&amp;lt;">
+<meta property="og:updated_time" content="2018-04-21T12:10:16.628Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="02-线性结构3 Reversing Linked List">
+<meta name="twitter:description" content="02-线性结构3 Reversing Linked List问题描述
+知识点总结：c++的格式控制：cout&amp;lt;&amp;lt;’A’&amp;lt;">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="狐獴" rel="home">狐獴</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-02-线性结构3-Reversing-Linked-List" class="post-02-线性结构3-Reversing-Linked-List post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      02-线性结构3 Reversing Linked List
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/21/02-线性结构3-Reversing-Linked-List/" data-id="cjg9bsk8f0003s8v08kuaqid0" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="02-线性结构3-Reversing-Linked-List"><a href="#02-线性结构3-Reversing-Linked-List" class="headerlink" title="02-线性结构3 Reversing Linked List"></a>02-线性结构3 Reversing Linked List</h1><p><a href="https://pintia.cn/problem-sets/951072707007700992/problems/972813177016877056" target="_blank" rel="external">问题描述</a></p>
+<h2 id="知识点总结："><a href="#知识点总结：" class="headerlink" title="知识点总结："></a>知识点总结：</h2><h3 id="c-的格式控制："><a href="#c-的格式控制：" class="headerlink" title="c++的格式控制："></a>c++的格式控制：</h3><p>cout&lt;&lt;’A’&lt;<setfill('0')<<left<<setw(7)<<'b'<<endl; 输出:="" ab000000="" 1.setw对后面紧跟的内容有效，也就是对b有效，因为是左对齐，所以先输出b后补全，也就是让b在左边="" 2.setw默认是右对齐，也就是从右边开始填写。如果指明从左边开始填写left，则setw后面的内容先左对齐，然后再是使用setfill的内容补全setw制定的宽度。="" 3.若输入的内容超过setw设定的宽度，则按照实际宽度输出4.这些控制io格式的操作符定义在iomanip中，不带参数的定义在iostream中="" <a="" id="more"></setfill('0')<<left<<setw(7)<<'b'<<endl;></p>
+<h3 id="vector容器中的begin-end-front-与back-函数："><a href="#vector容器中的begin-end-front-与back-函数：" class="headerlink" title="vector容器中的begin(),end(),front(),与back()函数："></a>vector容器中的begin(),end(),front(),与back()函数：</h3><ol>
+<li>iterator begin(),返回一个当前容器中起始元素的迭代器</li>
+<li>iterator end(),返回一个当前容器中末尾元素的迭代器</li>
+<li>reference front(),返回当前容器中起始元素的引用</li>
+<li>reference back(),返回当前容器中末尾元素的引用</li>
+</ol>
+<p>代码如下：<br>思路：1.定义一个向量，下标为address值，根据节点的顺序，依次加入到新的vector中，对新的vector中的每k个元素进行反转，输出结果<br>         使用空间换时间效率<br>      2.实际上并没有完全意义上的对链表进行反转，输出时利用的节点间的关系完成输出。</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;vector&gt;
+#include&lt;iomanip&gt;
+#include&lt;stdio.h&gt;
+using namespace std;
+//
+#define MAXA 100000
+struct Node
+{
+    int address=-1;
+    int data=0;
+    int next=-1;
+};
+
+void reversenode(vector&lt;Node&gt;&amp; list,int start,int end)
+{
+    while(start&lt;end)
+    {
+        Node tmp=list[start];
+        list[start]=list[end];
+        list[end]=tmp;
+        start++;
+        end--;
+    }
+}
+
+int main()
+{
+    int headadd,n,recount;
+    cin&gt;&gt;headadd&gt;&gt;n&gt;&gt;recount;
+    vector&lt;Node&gt; nodes(MAXA);
+
+    for(int i=0;i&lt;n;i++)
+    {
+        int addr,data,next;
+        cin&gt;&gt;addr&gt;&gt;data&gt;&gt;next;
+        nodes[addr].address=addr;
+        nodes[addr].data=data;
+        nodes[addr].next=next;
+    }
+
+    vector&lt;Node&gt; nodelist;
+    nodelist.push_back(nodes[headadd]);
+    while(nodelist.back().next!=-1)
+    {
+        nodelist.push_back(nodes[nodelist.back().next]);
+    }
+
+    int retime=nodelist.size()/recount;
+    for(int i=0;i&lt;retime;i++)
+    {
+        int start=i*recount;
+        int end=start+recount-1;
+        reversenode(nodelist,start,end);
+    }
+    /*for(int i=0;i&lt;nodelist.size()-1;i++)
+    {
+        cout&lt;&lt;setfill(&apos;0&apos;)&lt;&lt;setw(5)&lt;&lt;nodelist[i].address&lt;&lt;&quot; &quot;&lt;&lt;nodelist[i].data&lt;&lt;&quot; &quot;&lt;&lt;setw(5)&lt;&lt;setfill(&apos;0&apos;)&lt;&lt;nodelist[i+1].address&lt;&lt;endl;
+    }
+    cout&lt;&lt;setfill(&apos;0&apos;)&lt;&lt;setw(5)&lt;&lt;nodelist.back().address&lt;&lt;&quot; &quot;&lt;&lt;nodelist.back().data&lt;&lt;&quot; &quot;&lt;&lt;&quot;-1&quot;&lt;&lt;endl;
+    */
+    for (int i = 0; i &lt; nodelist.size()-1; i++)
+    {
+        printf(&quot;%05d %d %05d\n&quot;, nodelist[i].address, nodelist[i].data, nodelist[i+1].address);
+    }
+    printf(&quot;%05d %d %d\n&quot;, nodelist.back().address, nodelist.back().data, -1);
+
+    return 0;
+
+}
+</code></pre>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/04/21/02-线性结构3-Reversing-Linked-List/">
+    <time datetime="2018-04-21T11:40:25.000Z" class="entry-date">
+        2018-04-21
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c++</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2018/04/20/02一元多项式的乘法和加法/" rel="next">02一元多项式的乘法和加法 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/21/02-线性结构3-Reversing-Linked-List/">02-线性结构3 Reversing Linked List</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/20/02一元多项式的乘法和加法/">02一元多项式的乘法和加法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/12/01-最大子序列和问题/">01-最大子序列和问题</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/12/01-二分查找/">01-二分查找</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/06/opencv的基础笔记/">opencv的基础笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/c/" style="font-size: 20px;">c++</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2018 yyc
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

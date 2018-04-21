@@ -15,16 +15,16 @@
   
   <title>01-二分查找 | 狐獴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#01-二分查找问题描述二分法是这样定义的：        给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，        返回-1表示没找到。        二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列        中查找x;若List[M]&amp;lt;x，则">
+  <meta name="description" content="01二分查找问题描述二分法是这样定义的:        给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，        返回-1表示没找到。        二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列        中查找x;若List[M]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="01-二分查找">
 <meta property="og:url" content="http://yoursite.com/2018/04/12/01-二分查找/index.html">
 <meta property="og:site_name" content="狐獴">
-<meta property="og:description" content="#01-二分查找问题描述二分法是这样定义的：        给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，        返回-1表示没找到。        二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列        中查找x;若List[M]&amp;lt;x，则">
-<meta property="og:updated_time" content="2018-04-20T08:51:36.529Z">
+<meta property="og:description" content="01二分查找问题描述二分法是这样定义的:        给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，        返回-1表示没找到。        二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列        中查找x;若List[M]">
+<meta property="og:updated_time" content="2018-04-21T12:12:19.388Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="01-二分查找">
-<meta name="twitter:description" content="#01-二分查找问题描述二分法是这样定义的：        给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，        返回-1表示没找到。        二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列        中查找x;若List[M]&amp;lt;x，则">
+<meta name="twitter:description" content="01二分查找问题描述二分法是这样定义的:        给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，        返回-1表示没找到。        二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列        中查找x;若List[M]">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -79,14 +79,13 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-二分查找/" data-id="cjg7puqkk0001ykv0aei88zzy" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-二分查找/" data-id="cjg9bsk7o0000s8v0koleqtwr" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <p>#01-二分查找<br><a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389916265828352" target="_blank" rel="external">问题描述</a><br>二分法是这样定义的：<br>        给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，<br>        返回-1表示没找到。<br>        二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&gt;x,则在左边的子系列<br>        中查找x;若List[M]&lt;x，则在右边的子系列中查找x。</p>
-<p>函数代码如下：&lt;–!more–&gt;<br>        Position BinarySearch( List L, ElementType X )<br>        {<br>            //struct LNode left,right,mid;<br>            int left=1,right=L-&gt;Last;<br>            while(left&lt;=right)<br>            {<br>                int mid=left+((right-left)&gt;&gt;1);<br>                if(L-&gt;Data[mid]&gt;X)<br>                {<br>                    right=mid-1;<br>                }<br>                else if(L-&gt;Data[mid]&lt;X)<br>                {<br>                    left=mid+1;<br>                }<br>                else<br>                {<br>                    return mid;<br>                }<br>            }<br>            return NotFound;<br>        }</p>
+        <h1 id="01二分查找"><a href="#01二分查找" class="headerlink" title="01二分查找"></a>01二分查找</h1><p><a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389916265828352" target="_blank" rel="external">问题描述</a><br>二分法是这样定义的:<br>        给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，<br>        返回-1表示没找到。<br>        二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&gt;x,则在左边的子系列<br>        中查找x;若List[M]<x，则在右边的子系列中查找x。 <--!more--=""><br>函数代码如下：<br>        Position BinarySearch( List L, ElementType X )<br>        {<br>            //struct LNode left,right,mid;<br>            int left=1,right=L-&gt;Last;<br>            while(left&lt;=right)<br>            {<br>                int mid=left+((right-left)&gt;&gt;1);<br>                if(L-&gt;Data[mid]&gt;X)<br>                {<br>                    right=mid-1;<br>                }<br>                else if(L-&gt;Data[mid]&lt;X)<br>                {<br>                    left=mid+1;<br>                }<br>                else<br>                {<br>                    return mid;<br>                }<br>            }<br>            return NotFound;<br>        }</x，则在右边的子系列中查找x。></p>
 
       
     </div><!-- .entry-content -->
@@ -144,6 +143,10 @@
       <ul>
         
           <li>
+            <a href="/2018/04/21/02-线性结构3-Reversing-Linked-List/">02-线性结构3 Reversing Linked List</a>
+          </li>
+        
+          <li>
             <a href="/2018/04/20/02一元多项式的乘法和加法/">02一元多项式的乘法和加法</a>
           </li>
         
@@ -159,10 +162,6 @@
             <a href="/2016/11/06/opencv的基础笔记/">opencv的基础笔记</a>
           </li>
         
-          <li>
-            <a href="/2016/11/05/opencv环境的搭建/">opencv_contrib+vs2015环境的搭搭建知识总结</a>
-          </li>
-        
       </ul>
     </div>
   </aside>
@@ -172,7 +171,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </aside>
 
