@@ -15,16 +15,16 @@
   
   <title>01-二分查找 | 狐獴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="01二分查找问题描述二分法是这样定义的:            1.给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，            返回-1表示没找到。二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列            中查找x;若List[M]">
+  <meta name="description" content="01二分查找问题描述二分法是这样定义的:    1.给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，    返回-1表示没找到。二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列    中查找x;若List[M]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="01-二分查找">
 <meta property="og:url" content="http://yoursite.com/2018/04/12/01-二分查找/index.html">
 <meta property="og:site_name" content="狐獴">
-<meta property="og:description" content="01二分查找问题描述二分法是这样定义的:            1.给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，            返回-1表示没找到。二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列            中查找x;若List[M]">
-<meta property="og:updated_time" content="2018-04-22T13:54:59.445Z">
+<meta property="og:description" content="01二分查找问题描述二分法是这样定义的:    1.给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，    返回-1表示没找到。二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列    中查找x;若List[M]">
+<meta property="og:updated_time" content="2018-04-22T14:00:07.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="01-二分查找">
-<meta name="twitter:description" content="01二分查找问题描述二分法是这样定义的:            1.给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，            返回-1表示没找到。二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列            中查找x;若List[M]">
+<meta name="twitter:description" content="01二分查找问题描述二分法是这样定义的:    1.给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，    返回-1表示没找到。二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&amp;gt;x,则在左边的子系列    中查找x;若List[M]">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -79,13 +79,13 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-二分查找/" data-id="cjgavkhhe0000okv0a2hv3ydl" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-二分查找/" data-id="cjgavrlnx0000e0v0cxolp5hv" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <h1 id="01二分查找"><a href="#01二分查找" class="headerlink" title="01二分查找"></a>01二分查找</h1><p><a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389916265828352" target="_blank" rel="external">问题描述</a><br>二分法是这样定义的:<br>            1.给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，<br>            返回-1表示没找到。二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&gt;x,则在左边的子系列<br>            中查找x;若List[M]<x，则在右边的子系列中查找x。 <--!more--=""><br>函数代码如下：<br>            Position BinarySearch( List L, ElementType X )<br>            {<br>                //struct LNode left,right,mid;<br>                int left=1,right=L-&gt;Last;<br>                while(left&lt;=right)<br>                {<br>                    int mid=left+((right-left)&gt;&gt;1);<br>                    if(L-&gt;Data[mid]&gt;X)<br>                    {<br>                        right=mid-1;<br>                    }<br>                    else if(L-&gt;Data[mid]&lt;X)<br>                    {<br>                        left=mid+1;<br>                    }<br>                    else<br>                    {<br>                        return mid;<br>                    }<br>                }<br>                return NotFound;<br>            }</x，则在右边的子系列中查找x。></p>
+        <h1 id="01二分查找"><a href="#01二分查找" class="headerlink" title="01二分查找"></a>01二分查找</h1><p><a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389916265828352" target="_blank" rel="external">问题描述</a><br>二分法是这样定义的:<br>    1.给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，<br>    返回-1表示没找到。二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&gt;x,则在左边的子系列<br>    中查找x;若List[M]<x，则在右边的子系列中查找x。 <--!more--=""><br>函数代码如下：<br>            Position BinarySearch( List L, ElementType X )<br>            {<br>                //struct LNode left,right,mid;<br>                int left=1,right=L-&gt;Last;<br>                while(left&lt;=right)<br>                {<br>                    int mid=left+((right-left)&gt;&gt;1);<br>                    if(L-&gt;Data[mid]&gt;X)<br>                    {<br>                        right=mid-1;<br>                    }<br>                    else if(L-&gt;Data[mid]&lt;X)<br>                    {<br>                        left=mid+1;<br>                    }<br>                    else<br>                    {<br>                        return mid;<br>                    }<br>                }<br>                return NotFound;<br>            }</x，则在右边的子系列中查找x。></p>
 
       
     </div><!-- .entry-content -->
