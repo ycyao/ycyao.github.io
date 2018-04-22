@@ -16,18 +16,21 @@
   <title>169求众数 | 狐獴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="169求众数问题描述给定一个大小为 n 的数组，找到其中的众数。众数是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。你可以假设数组是非空的，并且数组中的众数永远存在。
-摩尔投票算法介绍:是一种在线时间O(n)和空间复杂度的情况下，在一个元素序列中查找包含最多的元素，是一种典型的流算法。      在它最简单的形式是查找最多的元素，即超过一半以上的元素。如果系列中没有最多的元素，算法不能检测正确结">
+摩尔投票算法介绍:是一种在线时间O(n)和空间复杂度的情况下，在一个元素序列中查找包含最多的元素，是一种典型的流算法。
+在它最简单的形式是查找最多的元素，即超过一半以上的元素。如果系列中没有最多的元素，算法不能检测正确结果，只是将">
 <meta property="og:type" content="article">
 <meta property="og:title" content="169求众数">
 <meta property="og:url" content="http://yoursite.com/2018/04/22/169求众数/index.html">
 <meta property="og:site_name" content="狐獴">
 <meta property="og:description" content="169求众数问题描述给定一个大小为 n 的数组，找到其中的众数。众数是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。你可以假设数组是非空的，并且数组中的众数永远存在。
-摩尔投票算法介绍:是一种在线时间O(n)和空间复杂度的情况下，在一个元素序列中查找包含最多的元素，是一种典型的流算法。      在它最简单的形式是查找最多的元素，即超过一半以上的元素。如果系列中没有最多的元素，算法不能检测正确结">
-<meta property="og:updated_time" content="2018-04-22T13:46:22.610Z">
+摩尔投票算法介绍:是一种在线时间O(n)和空间复杂度的情况下，在一个元素序列中查找包含最多的元素，是一种典型的流算法。
+在它最简单的形式是查找最多的元素，即超过一半以上的元素。如果系列中没有最多的元素，算法不能检测正确结果，只是将">
+<meta property="og:updated_time" content="2018-04-22T13:53:15.609Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="169求众数">
 <meta name="twitter:description" content="169求众数问题描述给定一个大小为 n 的数组，找到其中的众数。众数是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。你可以假设数组是非空的，并且数组中的众数永远存在。
-摩尔投票算法介绍:是一种在线时间O(n)和空间复杂度的情况下，在一个元素序列中查找包含最多的元素，是一种典型的流算法。      在它最简单的形式是查找最多的元素，即超过一半以上的元素。如果系列中没有最多的元素，算法不能检测正确结">
+摩尔投票算法介绍:是一种在线时间O(n)和空间复杂度的情况下，在一个元素序列中查找包含最多的元素，是一种典型的流算法。
+在它最简单的形式是查找最多的元素，即超过一半以上的元素。如果系列中没有最多的元素，算法不能检测正确结果，只是将">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -82,20 +85,31 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/22/169求众数/" data-id="cjgava9ci0001okv0nhf7qpsx" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/22/169求众数/" data-id="cjgavkhip0006okv0qsx64tp2" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
         <h1 id="169求众数"><a href="#169求众数" class="headerlink" title="169求众数"></a>169求众数</h1><p><a href="https://leetcode-cn.com/problems/majority-element/description/" target="_blank" rel="external">问题描述</a><br>给定一个大小为 n 的数组，找到其中的众数。众数是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。<br>你可以假设数组是非空的，并且数组中的众数永远存在。</p>
-<h2 id="摩尔投票算法"><a href="#摩尔投票算法" class="headerlink" title="摩尔投票算法"></a>摩尔投票算法</h2><p>介绍:是一种在线时间O(n)和空间复杂度的情况下，在一个元素序列中查找包含最多的元素，是一种典型的流算法。<br>      在它最简单的形式是查找最多的元素，即超过一半以上的元素。如果系列中没有最多的元素，算法不能检测正确结果，只是将输出其中的一个元素之一。<br>      当元素重复次数比较小时，对于流算法不能在小于线性空间的情况下查找频率最高的元素。</p>
-<p>描述：1.定义一个result和count(结果和计数器),计数器初始化为0；<br>      2.依次遍历序列中的元素，当处理元素x时：</p>
-<pre><code>      * 如果计数器为0，将x赋给result，计数器置为1，
-      * 如果计数器不为0，比较result和x，相等计数器加1，不相等计数器减1
+<h2 id="摩尔投票算法"><a href="#摩尔投票算法" class="headerlink" title="摩尔投票算法"></a>摩尔投票算法</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍:"></a>介绍:</h3><pre><code>是一种在线时间O(n)和空间复杂度的情况下，在一个元素序列中查找包含最多的元素，是一种典型的流算法。
+在它最简单的形式是查找最多的元素，即超过一半以上的元素。如果系列中没有最多的元素，算法不能检测正确结果，只是将输出其中的一个元素之一。
+当元素重复次数比较小时，对于流算法不能在小于线性空间的情况下查找频率最高的元素。
+</code></pre><p>&lt;–!–more–&gt;</p>
+<h3 id="描述："><a href="#描述：" class="headerlink" title="描述："></a>描述：</h3><pre><code>1.定义一个result和count(结果和计数器),计数器初始化为0；
+2.依次遍历序列中的元素，当处理元素x时：
+    如果计数器为0，将x赋给result，计数器置为1
+    如果计数器不为0，比较result和x，相等计数器加1，不相等计数器减1
 3.循环结束，result既为最多的元素
-</code></pre><p>理解：对于基本的摩尔投票问题，找出一组数字序列中出现次数大于一半的数字。显然问题中数字只有一个，如果存在的话。<br>      摩尔投票算法也是基于这样一个事实：<strong>每次从序列中选择两个不相同的数字相互抵消，最后剩下的一个数字或者几个相同的数字，就是出现次数大于总数一半的那个数字</strong>。<br>      在理解这个事实的基础上去考虑这个算法，就容易多了。<br>代码如下：<br>            class Solution {<br>            public:<br>                int majorityElement(vector<int>&amp; nums) {</int></p>
-<pre><code>        int re,count=0;
+</code></pre><h3 id="理解："><a href="#理解：" class="headerlink" title="理解："></a>理解：</h3><pre><code>对于基本的摩尔投票问题，找出一组数字序列中出现次数大于一半的数字。显然问题中数字只有一个，如果存在的话。
+摩尔投票算法也是基于这样一个事实：**每次从序列中选择两个不相同的数字相互抵消，最后剩下的一个数字或者几个相同的数字，就是出现次数大于总数一半的那个数字**。
+在理解这个事实的基础上去考虑这个算法，就容易多了。
+</code></pre><p>代码如下：</p>
+<pre><code>class Solution {
+public:
+    int majorityElement(vector&lt;int&gt;&amp; nums) {
+
+        int re,count=0;
         for(int va:nums)
         {
             if(count==0)
