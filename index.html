@@ -65,6 +65,74 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-169求众数" class="post-169求众数 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2018/04/22/169求众数/">169求众数</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/22/169求众数/" data-id="cjgava9ci0001okv0nhf7qpsx" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="169求众数"><a href="#169求众数" class="headerlink" title="169求众数"></a>169求众数</h1><p><a href="https://leetcode-cn.com/problems/majority-element/description/" target="_blank" rel="external">问题描述</a><br>给定一个大小为 n 的数组，找到其中的众数。众数是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。<br>你可以假设数组是非空的，并且数组中的众数永远存在。</p>
+<h2 id="摩尔投票算法"><a href="#摩尔投票算法" class="headerlink" title="摩尔投票算法"></a>摩尔投票算法</h2><p>介绍:是一种在线时间O(n)和空间复杂度的情况下，在一个元素序列中查找包含最多的元素，是一种典型的流算法。<br>      在它最简单的形式是查找最多的元素，即超过一半以上的元素。如果系列中没有最多的元素，算法不能检测正确结果，只是将输出其中的一个元素之一。<br>      当元素重复次数比较小时，对于流算法不能在小于线性空间的情况下查找频率最高的元素。</p>
+<p>描述：1.定义一个result和count(结果和计数器),计数器初始化为0；<br>      2.依次遍历序列中的元素，当处理元素x时：</p>
+<pre><code>      * 如果计数器为0，将x赋给result，计数器置为1，
+      * 如果计数器不为0，比较result和x，相等计数器加1，不相等计数器减1
+3.循环结束，result既为最多的元素
+</code></pre><p>理解：对于基本的摩尔投票问题，找出一组数字序列中出现次数大于一半的数字。显然问题中数字只有一个，如果存在的话。<br>      摩尔投票算法也是基于这样一个事实：<strong>每次从序列中选择两个不相同的数字相互抵消，最后剩下的一个数字或者几个相同的数字，就是出现次数大于总数一半的那个数字</strong>。<br>      在理解这个事实的基础上去考虑这个算法，就容易多了。<br>代码如下：<br>            class Solution {<br>            public:<br>                int majorityElement(vector<int>&amp; nums) {</int></p>
+<pre><code>        int re,count=0;
+        for(int va:nums)
+        {
+            if(count==0)
+            {
+                re=va;
+                count=1;
+            }
+            else if(re==va)
+                count++;
+            else count--;
+
+        }
+        return re;
+    }
+};
+</code></pre>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/04/22/169求众数/">
+    <time datetime="2018-04-22T13:23:14.000Z" class="entry-date">
+        2018-04-22
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-02-线性结构3-Reversing-Linked-List" class="post-02-线性结构3-Reversing-Linked-List post type-post status-publish format-standard hentry">
     <!---->
 
@@ -80,7 +148,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/21/02-线性结构3-Reversing-Linked-List/" data-id="cjg9ckddj0003r0v0ci2jhul3" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/21/02-线性结构3-Reversing-Linked-List/" data-id="cjgava9dd0006okv0t21fs7k2" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -135,7 +203,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/20/02一元多项式的乘法和加法/" data-id="cjg9ckddo0004r0v0pp1r8hub" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/20/02一元多项式的乘法和加法/" data-id="cjgava9dd0007okv0izj0bnpr" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -182,7 +250,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-最大子序列和问题/" data-id="cjg9ckdd30001r0v08ugtpr2w" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-最大子序列和问题/" data-id="cjgava9c20000okv0rjiaxy5d" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -232,13 +300,13 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-二分查找/" data-id="cjg9ckdcq0000r0v0jnnewfck" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/12/01-二分查找/" data-id="cjgava9e8000aokv0c6wo5bxa" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <h1 id="01二分查找"><a href="#01二分查找" class="headerlink" title="01二分查找"></a>01二分查找</h1><p><a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389916265828352" target="_blank" rel="external">问题描述</a><br>二分法是这样定义的:<br>        给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，<br>        返回-1表示没找到。<br>        二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&gt;x,则在左边的子系列<br>        中查找x;若List[M]<x，则在右边的子系列中查找x。 <--!more--=""><br>函数代码如下：<br>        Position BinarySearch( List L, ElementType X )<br>        {<br>            //struct LNode left,right,mid;<br>            int left=1,right=L-&gt;Last;<br>            while(left&lt;=right)<br>            {<br>                int mid=left+((right-left)&gt;&gt;1);<br>                if(L-&gt;Data[mid]&gt;X)<br>                {<br>                    right=mid-1;<br>                }<br>                else if(L-&gt;Data[mid]&lt;X)<br>                {<br>                    left=mid+1;<br>                }<br>                else<br>                {<br>                    return mid;<br>                }<br>            }<br>            return NotFound;<br>        }</x，则在右边的子系列中查找x。></p>
+        <h1 id="01二分查找"><a href="#01二分查找" class="headerlink" title="01二分查找"></a>01二分查找</h1><p><a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389916265828352" target="_blank" rel="external">问题描述</a><br>二分法是这样定义的:<br>        给定n个从小到大排序好的整数序列List[],以及待查找的整数x,我们的目标是找到x在List中的下标。否则，<br>        返回-1表示没找到。<br>        二分法是先找到序列的中点List[M],与x进行比较，相等返回中点下标；否则，若List[M]&gt;x,则在左边的子系列<br>        中查找x;若List[M]<x，则在右边的子系列中查找x。 <--!more--=""><br>函数代码如下：<br>            Position BinarySearch( List L, ElementType X )<br>            {<br>                //struct LNode left,right,mid;<br>                int left=1,right=L-&gt;Last;<br>                while(left&lt;=right)<br>                {<br>                    int mid=left+((right-left)&gt;&gt;1);<br>                    if(L-&gt;Data[mid]&gt;X)<br>                    {<br>                        right=mid-1;<br>                    }<br>                    else if(L-&gt;Data[mid]&lt;X)<br>                    {<br>                        left=mid+1;<br>                    }<br>                    else<br>                    {<br>                        return mid;<br>                    }<br>                }<br>                return NotFound;<br>            }</x，则在右边的子系列中查找x。></p>
 
       
     </div><!-- .entry-content -->
@@ -263,48 +331,6 @@
 
 
   
-    <article id="post-opencv的基础笔记" class="post-opencv的基础笔记 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2016/11/06/opencv的基础笔记/">opencv的基础笔记</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/06/opencv的基础笔记/" data-id="cjg9ckdej0008r0v0ks38efv7" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2016/11/06/opencv的基础笔记/">
-    <time datetime="2016-11-06T12:39:20.000Z" class="entry-date">
-        2016-11-06
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
     <article id="post-opencv环境的搭建" class="post-opencv环境的搭建 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -320,7 +346,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/05/opencv环境的搭建/" data-id="cjg9ckde30006r0v014z641r5" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/11/05/opencv环境的搭建/" data-id="cjgava9dt0009okv0vncztcq1" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -378,6 +404,10 @@
       <ul>
         
           <li>
+            <a href="/2018/04/22/169求众数/">169求众数</a>
+          </li>
+        
+          <li>
             <a href="/2018/04/21/02-线性结构3-Reversing-Linked-List/">02-线性结构3 Reversing Linked List</a>
           </li>
         
@@ -393,10 +423,6 @@
             <a href="/2018/04/12/01-二分查找/">01-二分查找</a>
           </li>
         
-          <li>
-            <a href="/2016/11/06/opencv的基础笔记/">opencv的基础笔记</a>
-          </li>
-        
       </ul>
     </div>
   </aside>
@@ -406,7 +432,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/">leetcode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </aside>
 
@@ -415,7 +441,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/c/" style="font-size: 20px;">c++</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a>
+      <a href="/tags/c/" style="font-size: 20px;">c++</a> <a href="/tags/leetcode/" style="font-size: 10px;">leetcode</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a>
     </div>
   </aside>
 
