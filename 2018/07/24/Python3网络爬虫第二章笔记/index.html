@@ -13,17 +13,21 @@
   
   
   
-  <title>Archives: 2016 | 狐獴</title>
+  <title>Python3网络爬虫第二章笔记 | 狐獴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="狐獴">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="Python3网络爬虫第二章笔记Http原理1.请求过程通过url，浏览器向网站的服务器发送了一个请求，网站服务器收到请求后进行解析和处理，然后返回对应的请求，传回给服务器。响应里面包含了页面的源代码等内容，浏览器在对其进行解析得到网页。
+2.请求请求分为四部分，由客户端向服务器端发出：请求方法(Request Method)，请求网址(Request URL)，请求头(Request Heade">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python3网络爬虫第二章笔记">
+<meta property="og:url" content="http://yoursite.com/2018/07/24/Python3网络爬虫第二章笔记/index.html">
 <meta property="og:site_name" content="狐獴">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="Python3网络爬虫第二章笔记Http原理1.请求过程通过url，浏览器向网站的服务器发送了一个请求，网站服务器收到请求后进行解析和处理，然后返回对应的请求，传回给服务器。响应里面包含了页面的源代码等内容，浏览器在对其进行解析得到网页。
+2.请求请求分为四部分，由客户端向服务器端发出：请求方法(Request Method)，请求网址(Request URL)，请求头(Request Heade">
+<meta property="og:updated_time" content="2018-07-24T14:32:43.726Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="狐獴">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="Python3网络爬虫第二章笔记">
+<meta name="twitter:description" content="Python3网络爬虫第二章笔记Http原理1.请求过程通过url，浏览器向网站的服务器发送了一个请求，网站服务器收到请求后进行解析和处理，然后返回对应的请求，传回给服务器。响应里面包含了页面的源代码等内容，浏览器在对其进行解析得到网页。
+2.请求请求分为四部分，由客户端向服务器端发出：请求方法(Request Method)，请求网址(Request URL)，请求头(Request Heade">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -63,46 +67,65 @@
     </nav>
 </header>
       <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-Python3网络爬虫第二章笔记" class="post-Python3网络爬虫第二章笔记 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="post type-post status-publish format-standard hentry archive-type-post">
-  <header class="entry-header">
-      
-  
-    <h1 class="entry-title">
-      <a class="archive-article-title" href="/2016/11/05/opencv环境的搭建/">opencv_contrib+vs2015环境的搭搭建知识总结</a>
+    <h1 class="entry-title article-title">
+      Python3网络爬虫第二章笔记
     </h1>
   
 
-  </header>
-  <footer class="entry-meta">
-    <a href="/2016/11/05/opencv环境的搭建/">
-    <time datetime="2016-11-05T13:11:13.000Z" class="entry-date">
-        2016-11-05
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/07/24/Python3网络爬虫第二章笔记/" data-id="cjmcy602g000ax0v0vsbu42ds" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="Python3网络爬虫第二章笔记"><a href="#Python3网络爬虫第二章笔记" class="headerlink" title="Python3网络爬虫第二章笔记"></a>Python3网络爬虫第二章笔记</h1><h2 id="Http原理"><a href="#Http原理" class="headerlink" title="Http原理"></a>Http原理</h2><h3 id="1-请求过程"><a href="#1-请求过程" class="headerlink" title="1.请求过程"></a>1.请求过程</h3><p>通过url，浏览器向网站的服务器发送了一个请求，网站服务器收到请求后进行解析和处理，然后返回对应的请求，传回给服务器。响应里面包含了页面的源代码等内容，浏览器在对其进行解析得到网页。</p>
+<h3 id="2-请求"><a href="#2-请求" class="headerlink" title="2.请求"></a>2.请求</h3><p>请求分为四部分，由客户端向服务器端发出：请求方法(Request Method)，请求网址(Request URL)，请求头(Request Headers)，请求体(Request Body)</p>
+<h4 id="2-1常见请求方法分为两种-get和post"><a href="#2-1常见请求方法分为两种-get和post" class="headerlink" title="2.1常见请求方法分为两种(get和post)"></a>2.1常见请求方法分为两种(get和post)</h4><p>(1)GET请求中的参数包含在URL里面，数据可以在URL中看到，而POST请求的URL不会包含这些数据，数据都是通过表单形式传输的，会包含在请求体中</p>
+<p>(2)GET请求提交的数据最多只有1024字节，而POST无限制</p>
+<h4 id="2-2其他请求方法"><a href="#2-2其他请求方法" class="headerlink" title="2.2其他请求方法"></a>2.2其他请求方法</h4><p>(1)<br>(2)<br>(3)</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/07/24/Python3网络爬虫第二章笔记/">
+    <time datetime="2018-07-24T14:14:18.000Z" class="entry-date">
+        2018-07-24
     </time>
 </a>
     
     
   <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/">opencv</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 
     </footer>
 </article>
-  
-  
-    </div></section>
-  
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2018/04/22/169求众数/" rel="next">169求众数 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
 
 </div></div>
         <div id="secondary" class="widget-area" role="complementary">
